@@ -15,6 +15,8 @@ import searchIcon from "./assets/search.png";
 import notificationIcon from "./assets/notification.png";
 import hamburgerIcon from "./assets/hamburger.png";
 import closeIcon from "./assets/close.png";
+
+// Import all movie images
 import m1 from "./assets/m1.png";
 import m2 from "./assets/m2.png";
 import m3 from "./assets/m3.png";
@@ -43,6 +45,8 @@ import m25 from "./assets/m25.png";
 import m26 from "./assets/m26.png";
 import m27 from "./assets/m27.png";
 import playMusicIcon from "./assets/playmusic.png";
+
+// Device icons
 import phoneIcon from "./assets/smartphone.svg";
 import gamesIcon from "./assets/games.svg";
 import tvIcon from "./assets/tv.svg";
@@ -50,6 +54,7 @@ import laptopIcon from "./assets/laptop.svg";
 import tabletIcon from "./assets/tablet.svg";
 import vrIcon from "./assets/vr.svg";
 
+// Category data with 4 images (2x2 grid) per category
 const categories = [
   {
     name: "Action",
@@ -77,14 +82,60 @@ const categories = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What is StreamVibe?",
+    answer:
+      "StreamVibe is a streaming service that allows you to watch movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more.",
+  },
+  {
+    question: "How much does StreamVibe cost?",
+    answer:
+      "StreamVibe offers flexible pricing plans to suit your needs. Choose from our Basic, Standard, or Premium plans. Each plan includes unlimited streaming access to our entire content library.",
+  },
+  {
+    question: "What content is available on StreamVibe?",
+    answer:
+      "StreamVibe offers a vast library of content including movies, TV shows, documentaries, and original series. We regularly update our content library with new releases and exclusive titles.",
+  },
+  {
+    question: "How can I watch StreamVibe?",
+    answer:
+      "You can watch StreamVibe on any device including smartphones, tablets, smart TVs, laptops, gaming consoles, and VR headsets. Simply download our app or visit our website.",
+  },
+  {
+    question: "How do I sign up for StreamVibe?",
+    answer:
+      "To sign up for StreamVibe, simply click on the 'Sign Up' button on our homepage and follow the prompts to create your account. Choose your subscription plan and start streaming.",
+  },
+  {
+    question: "What is the StreamVibe free trial?",
+    answer:
+      "New StreamVibe users can enjoy a 7-day free trial to explore our entire content library. No credit card required to start your free trial.",
+  },
+  {
+    question: "How do I contact StreamVibe customer support?",
+    answer:
+      "Our dedicated support team is available 24/7. You can reach us via email, live chat, or phone. Visit the Contact Us page for more information.",
+  },
+  {
+    question: "What are the StreamVibe payment methods?",
+    answer:
+      "StreamVibe accepts all major credit cards, debit cards, digital wallets, and other secure payment methods for your convenience.",
+  },
+];
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null); // Start with no item open
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
   }, []);
+
   return (
     <>
       <header className="App-header">
@@ -97,8 +148,8 @@ function App() {
             Home
           </a>
           <a href="#movies">Movies & Shows</a>
-          <a href="#Support">Support</a>
-          <a href="#Subscriptions">Subscriptions</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQs</a>
 
           <button className="close" onClick={() => setIsOpen(false)}>
             <img src={closeIcon} alt="close" />
@@ -121,117 +172,53 @@ function App() {
 
       <section className="hero">
         <div className="hero-container">
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m1} alt="Movie 1" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m2} alt="Movie 2" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m3} alt="Movie 3" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m4} alt="Movie 4" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m5} alt="Movie 5" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up ">
-            <img src={m6} alt="Movie 6" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m7} alt="Movie 7" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m8} alt="Movie 8" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m9} alt="Movie 9" />
-          </div>
-
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m10} alt="Movie 10" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m11} alt="Movie 11" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m12} alt="Movie 12" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m13} alt="Movie 13" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m14} alt="Movie 14" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m15} alt="Movie 15" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m16} alt="Movie 16" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m17} alt="Movie 17" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m18} alt="Movie 18" />
-          </div>
-
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m19} alt="Movie 19" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m20} alt="Movie 20" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m21} alt="Movie 21" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m22} alt="Movie 22" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m23} alt="Movie 23" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m24} alt="Movie 24" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m25} alt="Movie 25" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m26} alt="Movie 26" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m27} alt="Movie 27" />
-          </div>
-
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m10} alt="Movie 10" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m11} alt="Movie 11" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m12} alt="Movie 12" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m13} alt="Movie 13" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m14} alt="Movie 14" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m15} alt="Movie 15" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m16} alt="Movie 16" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m17} alt="Movie 17" />
-          </div>
-          <div className="hero-image" aos-delay="100" data-aos="fade-up">
-            <img src={m18} alt="Movie 18" />
-          </div>
+          {[
+            m1,
+            m2,
+            m3,
+            m4,
+            m5,
+            m6,
+            m7,
+            m8,
+            m9,
+            m10,
+            m11,
+            m12,
+            m13,
+            m14,
+            m15,
+            m16,
+            m17,
+            m18,
+            m19,
+            m20,
+            m21,
+            m22,
+            m23,
+            m24,
+            m25,
+            m26,
+            m27,
+            m10,
+            m11,
+            m12,
+            m13,
+            m14,
+            m15,
+            m16,
+            m17,
+            m18,
+          ].map((movie, index) => (
+            <div
+              key={index}
+              className="hero-image"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img src={movie} alt={`Movie ${index}`} />
+            </div>
+          ))}
         </div>
 
         <div className="hero-content">
@@ -244,7 +231,7 @@ function App() {
             StreamVibe, you can enjoy a wide variety of content, including the
             latest blockbusters, classic movies, popular TV shows, and more. You
             can also create your own watchlists, so you can easily find the
-            content you want to watch..
+            content you want to watch.
           </p>
           <button className="btn" data-aos-delay="200" data-aos="fade-up">
             <img src={playMusicIcon} alt="Play Music" />
@@ -427,6 +414,41 @@ function App() {
                 Store
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq" id="faq">
+        <div className="faq-container">
+          <div className="faq-header">
+            <div className="faq-titles">
+              <h2>Frequently Asked Questions</h2>
+              <p>
+                Got questions? We've got answers! Check out our FAQ section to
+                find answers to the most common questions about StreamVibe
+              </p>
+            </div>
+
+            <button className="btn-primary">Ask a Question</button>
+          </div>
+          <div className="faq-items">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`faq-item ${openIndex === index ? "active" : ""}`}
+                onClick={() => {
+                  if (openIndex === index) {
+                    setOpenIndex(null);
+                  } else {
+                    setOpenIndex(index);
+                  }
+                }}
+                data-number={String(index + 1).padStart(2, "0")}
+              >
+                <h3>{faq.question}</h3>
+                {openIndex === index && <p>{faq.answer}</p>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
