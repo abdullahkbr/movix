@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import "./App.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./App.css";
 import logo from "./assets/logo.png";
 import searchIcon from "./assets/search.png";
 import notificationIcon from "./assets/notification.png";
@@ -36,6 +43,33 @@ import m25 from "./assets/m25.png";
 import m26 from "./assets/m26.png";
 import m27 from "./assets/m27.png";
 import playMusicIcon from "./assets/playmusic.png";
+
+const categories = [
+  {
+    name: "Action",
+    images: [m1, m2, m7, m8],
+  },
+  {
+    name: "Adventure",
+    images: [m3, m4, m9, m10],
+  },
+  {
+    name: "Comedy",
+    images: [m5, m6, m11, m12],
+  },
+  {
+    name: "Drama",
+    images: [m13, m14, m19, m20],
+  },
+  {
+    name: "Horror",
+    images: [m15, m16, m21, m22],
+  },
+  {
+    name: "Thriller",
+    images: [m17, m18, m23, m24],
+  },
+];
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -195,10 +229,10 @@ function App() {
         </div>
 
         <div className="hero-content">
-          <h1 data-aos-delay="100" data-aos="fade-up">
+          <h1 data-aos-delay="200" data-aos="fade-up">
             The Best Streaming Experience.
           </h1>
-          <p data-aos-delay="100" data-aos="fade-up">
+          <p data-aos-delay="200" data-aos="fade-up">
             StreamVibe is the best streaming experience for watching your
             favorite movies and shows on demand, anytime, anywhere. With
             StreamVibe, you can enjoy a wide variety of content, including the
@@ -206,7 +240,7 @@ function App() {
             can also create your own watchlists, so you can easily find the
             content you want to watch..
           </p>
-          <button className="btn" data-aos-delay="100" data-aos="fade-up">
+          <button className="btn" data-aos-delay="200" data-aos="fade-up">
             <img src={playMusicIcon} alt="Play Music" />
             <span>Watch Now</span>
           </button>
@@ -214,7 +248,59 @@ function App() {
       </section>
 
       <section className="slider">
-        <div className="slider-container"></div>
+        <div className="slider-header">
+          <div className="slider-titles">
+            <h2>Explore our wide variety of categories</h2>
+            <p>
+              Whether you're looking for a comedy to make you laugh, a drama to
+              make you think, or a documentary to learn something new
+            </p>
+          </div>
+
+          <div className="slider-controls">
+            <div className="swiper-button-prev-custom">←</div>
+            <div className="swiper-pagination-custom"></div>
+            <div className="swiper-button-next-custom">→</div>
+          </div>
+        </div>
+
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+          pagination={{
+            el: ".swiper-pagination-custom",
+            type: "bullets",
+          }}
+          navigation={{
+            prevEl: ".swiper-button-prev-custom",
+            nextEl: ".swiper-button-next-custom",
+          }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper"
+        >
+          {categories.map((category, index) => (
+            <SwiperSlide key={index} className="swiper-slide category-slide">
+              <div className="category-card">
+                <div className="category-grid">
+                  {category.images.map((image, imgIndex) => (
+                    <div key={imgIndex} className="grid-item">
+                      <img src={image} alt={`${category.name} ${imgIndex}`} />
+                    </div>
+                  ))}
+                </div>
+                <div className="category-footer">
+                  <span className="category-name">{category.name}</span>
+                  <span className="category-arrow">→</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
     </>
   );
