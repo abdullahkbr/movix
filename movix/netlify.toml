@@ -1,0 +1,4 @@
+[build]
+  base = "movix"
+  publish = "dist"
+  command = "npm run build"
