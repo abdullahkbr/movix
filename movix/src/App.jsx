@@ -43,6 +43,12 @@ import m25 from "./assets/m25.png";
 import m26 from "./assets/m26.png";
 import m27 from "./assets/m27.png";
 import playMusicIcon from "./assets/playmusic.png";
+import phoneIcon from "./assets/smartphone.svg";
+import gamesIcon from "./assets/games.svg";
+import tvIcon from "./assets/tv.svg";
+import laptopIcon from "./assets/laptop.svg";
+import tabletIcon from "./assets/tablet.svg";
+import vrIcon from "./assets/vr.svg";
 
 const categories = [
   {
@@ -247,7 +253,7 @@ function App() {
         </div>
       </section>
 
-      <section className="slider">
+      <section className="slider" id="movies">
         <div className="slider-header">
           <div className="slider-titles">
             <h2>Explore our wide variety of categories</h2>
@@ -301,6 +307,128 @@ function App() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section>
+
+      <section className="features" id="features">
+        <div className="features-container">
+          <div className="feature-header">
+            <h2>We Provide you streaming experience across various devices.</h2>
+            <p>
+              Our dedicated support team is available 24/7 to assist you with
+              any questions or issues you may have. Whether you need help with
+              your account, billing, or technical support, we're here to ensure
+              you have the best streaming experience possible.
+            </p>
+          </div>
+
+          <div className="feature-grid">
+            <div
+              className="feature-item"
+              data-aos-delay="100"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={phoneIcon} alt="Smartphones" />
+                </div>
+                <h3>Smartphones</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS smartphones.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+            <div
+              className="feature-item"
+              data-aos-delay="200"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={tabletIcon} alt="Tablet" />
+                </div>
+                <h3>Tablet</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS tablets.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+            <div
+              className="feature-item"
+              data-aos-delay="300"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={tvIcon} alt="Smart TV" />
+                </div>
+                <h3>Smart TV</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS smartphones.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+
+            <div
+              className="feature-item"
+              data-aos-delay="400"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={laptopIcon} alt="Laptop" />
+                </div>
+                <h3>Laptop</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS smartphones.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+
+            <div
+              className="feature-item"
+              data-aos-delay="500"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={gamesIcon} alt="Gaming Consoles" />
+                </div>
+                <h3>Gaming Consoles</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS smartphones.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+
+            <div
+              className="feature-item"
+              data-aos-delay="500"
+              data-aos="fade-up"
+            >
+              <div className="feature-item-header">
+                <div className="feature-icon">
+                  <img src={vrIcon} alt="VR" />
+                </div>
+                <h3>VR Headsets</h3>
+              </div>
+              <p>
+                StreamVibe is optimized for both Android and iOS smartphones.
+                Download our app from the Google Play Store or the Apple App
+                Store
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
