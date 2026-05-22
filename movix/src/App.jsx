@@ -136,6 +136,14 @@ function App() {
     });
   }, []);
 
+  const [billingCycle, setBillingCycle] = useState("monthly");
+
+  const pricingData = {
+    basic: { monthly: 9.99, yearly: 99.99 },
+    standard: { monthly: 14.99, yearly: 149.99 },
+    premium: { monthly: 19.99, yearly: 199.99 },
+  };
+
   return (
     <>
       <header className="App-header">
@@ -449,6 +457,103 @@ function App() {
                 {openIndex === index && <p>{faq.answer}</p>}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pricing">
+        <div className="pricing-container">
+          <div className="pricing-header">
+            <div className="pricing-titles">
+              <h2>Simple, Transparent Pricing</h2>
+              <p>
+                Choose the plan that's right for you. All plans include a 14-day
+                free trial.
+              </p>
+            </div>
+
+            <div className="pricing-cta">
+              <button
+                className={`btn-primary ${billingCycle === "monthly" ? "active" : ""}`}
+                onClick={() => setBillingCycle("monthly")}
+              >
+                Monthly
+              </button>
+              <button
+                className={`btn-primary ${billingCycle === "yearly" ? "active" : ""}`}
+                onClick={() => setBillingCycle("yearly")}
+              >
+                Yearly
+              </button>
+            </div>
+          </div>
+
+          <div className="pricing-items">
+            <div className="pricing-item">
+              <h3>Basic Plan</h3>
+              <p>
+                Enjoy an extensive library of movies and shows, featuring a
+                range of content, including recently released titles.
+              </p>
+              <h3 className="price">
+                $
+                {billingCycle === "monthly"
+                  ? pricingData.basic.monthly
+                  : pricingData.basic.yearly}
+                <span className="price-period">
+                  /{billingCycle === "monthly" ? "month" : "year"}
+                </span>
+              </h3>
+
+              <div className="pricing-item__cta">
+                <button className="item-btn">Start Free Trial</button>
+                <button className="item-btn__secondary">Choose Plan</button>
+              </div>
+            </div>
+
+            <div className="pricing-item">
+              <h3>Standard Plan</h3>
+              <p>
+                Enjoy an extensive library of movies and shows, featuring a
+                range of content, including recently released titles.
+              </p>
+              <h3 className="price">
+                $
+                {billingCycle === "monthly"
+                  ? pricingData.standard.monthly
+                  : pricingData.standard.yearly}
+                <span className="price-period">
+                  /{billingCycle === "monthly" ? "month" : "year"}
+                </span>
+              </h3>
+
+              <div className="pricing-item__cta">
+                <button className="item-btn">Start Free Trial</button>
+                <button className="item-btn__secondary">Choose Plan</button>
+              </div>
+            </div>
+
+            <div className="pricing-item">
+              <h3>Premium Plan</h3>
+              <p>
+                Enjoy an extensive library of movies and shows, featuring a
+                range of content, including recently released titles.
+              </p>
+              <h3 className="price">
+                $
+                {billingCycle === "monthly"
+                  ? pricingData.premium.monthly
+                  : pricingData.premium.yearly}
+                <span className="price-period">
+                  /{billingCycle === "monthly" ? "month" : "year"}
+                </span>
+              </h3>
+
+              <div className="pricing-item__cta">
+                <button className="item-btn">Start Free Trial</button>
+                <button className="item-btn__secondary">Choose Plan</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
