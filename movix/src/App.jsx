@@ -45,6 +45,9 @@ import m25 from "./assets/m25.png";
 import m26 from "./assets/m26.png";
 import m27 from "./assets/m27.png";
 import playMusicIcon from "./assets/playmusic.png";
+import facebookIcon from "./assets/facebook.png";
+import twitterIcon from "./assets/twitter.png";
+import linkedinIcon from "./assets/linkedin.png";
 
 // Device icons
 import phoneIcon from "./assets/smartphone.svg";
@@ -461,7 +464,7 @@ function App() {
         </div>
       </section>
 
-      <section className="pricing">
+      <section className="pricing" id="#Plans">
         <div className="pricing-container">
           <div className="pricing-header">
             <div className="pricing-titles">
@@ -557,6 +560,84 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="trails">
+        <div className="trails-container">
+          <div className="trails-header">
+            <h2>Start your free trial today!</h2>
+            <p>
+              This is a clear and concise call to action that encourages users
+              to sign up for a free trial of StreamVibe.
+            </p>
+          </div>
+
+          <button className="trails-btn">Start a Free Trial</button>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="footer-container">
+          <nav>
+            <h4>Home</h4>
+            <div>
+              <a href="#categories">Categories</a>
+              <a href="#devices">Devices</a>
+              <a href="#plans">Pricing</a>
+              <a href="#faq">FAQ</a>
+            </div>
+          </nav>
+
+          <nav>
+            <h4>Movies</h4>
+            <div>
+              <a href="#Gernes">Gernes</a>
+              <a href="#Trending">Trending</a>
+              <a href="#newRelease">New Release</a>
+              <a href="#Popular">Popular</a>
+            </div>
+          </nav>
+
+          <nav>
+            <h4>Shows</h4>
+            <div>
+              <a href="#Gernes">Gernes</a>
+              <a href="#Trending">Trending</a>
+              <a href="#newRelease">New Release</a>
+              <a href="#Popular">Popular</a>
+            </div>
+          </nav>
+
+          <nav>
+            <h4>Support</h4>
+            <div>
+              <a href="#ContactUs">Contact Us</a>
+            </div>
+          </nav>
+
+          <nav>
+            <h4>Subscription</h4>
+            <div>
+              <a href="#Plans">Plans</a>
+              <a href="#Features">Features</a>
+            </div>
+          </nav>
+
+          <nav className="social">
+            <h4>Connect With Us</h4>
+            <div>
+              <a href="#Plans">
+                <img src={facebookIcon} alt="Facebook" />
+              </a>
+              <a href="#Features">
+                <img src={twitterIcon} alt="Twitter" />
+              </a>
+              <a href="#ContactUs">
+                <img src={linkedinIcon} alt="LinkedIn" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </footer>
     </>
   );
 }

@@ -766,6 +766,10 @@
 
 .pricing {
   margin-bottom: 150px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 .pricing-container {
@@ -927,6 +931,145 @@
 
     .item-btn__secondary {
       background: #ff0000;
+    }
+  }
+}
+
+.trails {
+  padding-inline: 20px;
+  margin-bottom: 150px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.trails-container {
+  width: 100%;
+  max-width: 1295px;
+  margin-inline: auto;
+  padding: 100px 80px;
+  background-image: url("./assets/trail.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 60px 20px;
+    justify-content: center;
+  }
+}
+
+.trails-header {
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.trails-btn {
+  background: #ff0000;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #000;
+  }
+}
+
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  background: #0f0f0f;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1295px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+
+  @media (max-width: 1224px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  nav {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #999999;
+      font-size: 14px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: brightness(1.5);
+        }
+      }
+    }
+  }
+}
+
+.social {
+  div {
+    flex-direction: row !important;
+    gap: 15px;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    a {
+      padding: 16px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: #ff0000;
+      }
     }
   }
 }
