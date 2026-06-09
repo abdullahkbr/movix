@@ -10,8 +10,6 @@ https://movixdemo.netlify.app/
 ---
 
 ## 📸 Preview
-
-*(Add screenshots or GIFs of your project here)*  
 - Hero section with animated movie grid  
 - Category slider using Swiper  
 - Pricing toggle (Monthly/Yearly)  
