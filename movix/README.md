@@ -1,16 +1,34 @@
-# React + Vite
+# 🎬 StreamVibe – Movie Streaming UI (React Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StreamVibe is a modern, responsive movie streaming website UI built with React. It showcases categories of movies, device compatibility features, pricing plans, FAQs, and interactive UI components like sliders, animations, and mobile navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
+*(Add your deployed link here if available)*  
+Example: https://your-project-link.com
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Preview
 
-## Expanding the ESLint configuration
+*(Add screenshots or GIFs of your project here)*  
+- Hero section with animated movie grid  
+- Category slider using Swiper  
+- Pricing toggle (Monthly/Yearly)  
+- FAQ accordion  
+- Responsive mobile menu  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- React.js (Functional Components + Hooks)
+- Swiper.js (Carousel/Slider)
+- AOS (Animate On Scroll Library)
+- CSS3 (Custom Styling)
+- JavaScript (ES6+)
+
+---
+
+## 📁 Project Structure
