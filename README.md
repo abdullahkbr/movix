@@ -5,8 +5,7 @@ StreamVibe is a modern, responsive movie streaming website UI built with React. 
 ---
 
 ## 🚀 Live Demo
-*(Add your deployed link here if available)*  
-Example: https://your-project-link.com
+https://movixdemo.netlify.app/
 
 ---
 
